@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB33BE6317510F9900B2D262 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB33BE6217510F9900B2D262 /* UIKit.framework */; };
+		DB33BE6517510F9900B2D262 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB33BE6417510F9900B2D262 /* Foundation.framework */; };
+		DB33BE6717510F9900B2D262 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB33BE6617510F9900B2D262 /* CoreGraphics.framework */; };
+		DB33BE6D17510F9900B2D262 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB33BE6B17510F9900B2D262 /* InfoPlist.strings */; };
+		DB33BE6F17510F9900B2D262 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33BE6E17510F9900B2D262 /* main.m */; };
+		DB33BE7317510F9900B2D262 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33BE7217510F9900B2D262 /* AppDelegate.m */; };
+		DB33BE7517510F9900B2D262 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DB33BE7417510F9900B2D262 /* Default.png */; };
+		DB33BE7717510F9900B2D262 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB33BE7617510F9900B2D262 /* Default@2x.png */; };
+		DB33BE7917510F9900B2D262 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB33BE7817510F9900B2D262 /* Default-568h@2x.png */; };
+		DB33BE7C17510F9900B2D262 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB33BE7A17510F9900B2D262 /* MainStoryboard_iPhone.storyboard */; };
+		DB33BE7F17510F9900B2D262 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB33BE7D17510F9900B2D262 /* MainStoryboard_iPad.storyboard */; };
+		DB33BE8217510F9900B2D262 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33BE8117510F9900B2D262 /* ViewController.m */; };
+		DB33BE8A17510F9900B2D262 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB33BE8917510F9900B2D262 /* SenTestingKit.framework */; };
+		DB33BE8B17510F9900B2D262 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB33BE6217510F9900B2D262 /* UIKit.framework */; };
+		DB33BE8C17510F9900B2D262 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB33BE6417510F9900B2D262 /* Foundation.framework */; };
+		DB33BE9417510F9900B2D262 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB33BE9217510F9900B2D262 /* InfoPlist.strings */; };
+		DB33BE9717510F9900B2D262 /* DotMatrixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33BE9617510F9900B2D262 /* DotMatrixTests.m */; };
+		DB33BEA71751104500B2D262 /* libGtarController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB33BEA017510FCB00B2D262 /* libGtarController.a */; };
+		DB33BEA91751105100B2D262 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB33BEA81751105100B2D262 /* CoreMIDI.framework */; };
+		DB33BEAC175111DE00B2D262 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33BEAB175111DE00B2D262 /* Cell.m */; };
+		DB58B1951757086000C3B589 /* GtarDotMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = DB58B1941757086000C3B589 /* GtarDotMatrix.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB33BE8D17510F9900B2D262 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB33BE5717510F9900B2D262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB33BE5E17510F9900B2D262;
+			remoteInfo = DotMatrix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB33BE5F17510F9900B2D262 /* DotMatrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotMatrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB33BE6217510F9900B2D262 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB33BE6417510F9900B2D262 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB33BE6617510F9900B2D262 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB33BE6A17510F9900B2D262 /* DotMatrix-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DotMatrix-Info.plist"; sourceTree = "<group>"; };
+		DB33BE6C17510F9900B2D262 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB33BE6E17510F9900B2D262 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB33BE7017510F9900B2D262 /* DotMatrix-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DotMatrix-Prefix.pch"; sourceTree = "<group>"; };
+		DB33BE7117510F9900B2D262 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DB33BE7217510F9900B2D262 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DB33BE7417510F9900B2D262 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DB33BE7617510F9900B2D262 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DB33BE7817510F9900B2D262 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DB33BE7B17510F9900B2D262 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		DB33BE7E17510F9900B2D262 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		DB33BE8017510F9900B2D262 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DB33BE8117510F9900B2D262 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DB33BE8817510F9900B2D262 /* DotMatrixTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DotMatrixTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB33BE8917510F9900B2D262 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DB33BE9117510F9900B2D262 /* DotMatrixTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DotMatrixTests-Info.plist"; sourceTree = "<group>"; };
+		DB33BE9317510F9900B2D262 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB33BE9517510F9900B2D262 /* DotMatrixTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotMatrixTests.h; sourceTree = "<group>"; };
+		DB33BE9617510F9900B2D262 /* DotMatrixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotMatrixTests.m; sourceTree = "<group>"; };
+		DB33BEA017510FCB00B2D262 /* libGtarController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGtarController.a; sourceTree = "<group>"; };
+		DB33BEA317510FDB00B2D262 /* Gtar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gtar.h; sourceTree = "<group>"; };
+		DB33BEA417510FDB00B2D262 /* GtarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GtarController.h; sourceTree = "<group>"; };
+		DB33BEA517510FDB00B2D262 /* libGtarController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGtarController.a; sourceTree = "<group>"; };
+		DB33BEA81751105100B2D262 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		DB33BEAA175111DE00B2D262 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		DB33BEAB175111DE00B2D262 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		DB58B18F1756C70500C3B589 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; name = File; path = ../../../Desktop/File; sourceTree = "<group>"; };
+		DB58B1931757086000C3B589 /* GtarDotMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GtarDotMatrix.h; sourceTree = "<group>"; };
+		DB58B1941757086000C3B589 /* GtarDotMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GtarDotMatrix.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB33BE5C17510F9900B2D262 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB33BEA91751105100B2D262 /* CoreMIDI.framework in Frameworks */,
+				DB33BE6317510F9900B2D262 /* UIKit.framework in Frameworks */,
+				DB33BE6517510F9900B2D262 /* Foundation.framework in Frameworks */,
+				DB33BEA71751104500B2D262 /* libGtarController.a in Frameworks */,
+				DB33BE6717510F9900B2D262 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB33BE8417510F9900B2D262 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB33BE8A17510F9900B2D262 /* SenTestingKit.framework in Frameworks */,
+				DB33BE8B17510F9900B2D262 /* UIKit.framework in Frameworks */,
+				DB33BE8C17510F9900B2D262 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB33BE5617510F9900B2D262 = {
+			isa = PBXGroup;
+			children = (
+				DB58B18F1756C70500C3B589 /* File */,
+				DB33BEA81751105100B2D262 /* CoreMIDI.framework */,
+				DB33BEA217510FDB00B2D262 /* GtarController */,
+				DB33BEA017510FCB00B2D262 /* libGtarController.a */,
+				DB33BE6817510F9900B2D262 /* DotMatrix */,
+				DB33BE8F17510F9900B2D262 /* DotMatrixTests */,
+				DB33BE6117510F9900B2D262 /* Frameworks */,
+				DB33BE6017510F9900B2D262 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB33BE6017510F9900B2D262 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB33BE5F17510F9900B2D262 /* DotMatrix.app */,
+				DB33BE8817510F9900B2D262 /* DotMatrixTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB33BE6117510F9900B2D262 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB33BE6217510F9900B2D262 /* UIKit.framework */,
+				DB33BE6417510F9900B2D262 /* Foundation.framework */,
+				DB33BE6617510F9900B2D262 /* CoreGraphics.framework */,
+				DB33BE8917510F9900B2D262 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB33BE6817510F9900B2D262 /* DotMatrix */ = {
+			isa = PBXGroup;
+			children = (
+				DB33BE7117510F9900B2D262 /* AppDelegate.h */,
+				DB33BE7217510F9900B2D262 /* AppDelegate.m */,
+				DB33BE7A17510F9900B2D262 /* MainStoryboard_iPhone.storyboard */,
+				DB33BE7D17510F9900B2D262 /* MainStoryboard_iPad.storyboard */,
+				DB33BE8017510F9900B2D262 /* ViewController.h */,
+				DB33BE8117510F9900B2D262 /* ViewController.m */,
+				DB33BE6917510F9900B2D262 /* Supporting Files */,
+				DB33BEAA175111DE00B2D262 /* Cell.h */,
+				DB33BEAB175111DE00B2D262 /* Cell.m */,
+				DB58B1931757086000C3B589 /* GtarDotMatrix.h */,
+				DB58B1941757086000C3B589 /* GtarDotMatrix.m */,
+			);
+			path = DotMatrix;
+			sourceTree = "<group>";
+		};
+		DB33BE6917510F9900B2D262 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB33BE6A17510F9900B2D262 /* DotMatrix-Info.plist */,
+				DB33BE6B17510F9900B2D262 /* InfoPlist.strings */,
+				DB33BE6E17510F9900B2D262 /* main.m */,
+				DB33BE7017510F9900B2D262 /* DotMatrix-Prefix.pch */,
+				DB33BE7417510F9900B2D262 /* Default.png */,
+				DB33BE7617510F9900B2D262 /* Default@2x.png */,
+				DB33BE7817510F9900B2D262 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB33BE8F17510F9900B2D262 /* DotMatrixTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB33BE9517510F9900B2D262 /* DotMatrixTests.h */,
+				DB33BE9617510F9900B2D262 /* DotMatrixTests.m */,
+				DB33BE9017510F9900B2D262 /* Supporting Files */,
+			);
+			path = DotMatrixTests;
+			sourceTree = "<group>";
+		};
+		DB33BE9017510F9900B2D262 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB33BE9117510F9900B2D262 /* DotMatrixTests-Info.plist */,
+				DB33BE9217510F9900B2D262 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB33BEA217510FDB00B2D262 /* GtarController */ = {
+			isa = PBXGroup;
+			children = (
+				DB33BEA317510FDB00B2D262 /* Gtar.h */,
+				DB33BEA417510FDB00B2D262 /* GtarController.h */,
+				DB33BEA517510FDB00B2D262 /* libGtarController.a */,
+			);
+			path = GtarController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB33BE5E17510F9900B2D262 /* DotMatrix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB33BE9A17510F9900B2D262 /* Build configuration list for PBXNativeTarget "DotMatrix" */;
+			buildPhases = (
+				DB33BE5B17510F9900B2D262 /* Sources */,
+				DB33BE5C17510F9900B2D262 /* Frameworks */,
+				DB33BE5D17510F9900B2D262 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DotMatrix;
+			productName = DotMatrix;
+			productReference = DB33BE5F17510F9900B2D262 /* DotMatrix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB33BE8717510F9900B2D262 /* DotMatrixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB33BE9D17510F9900B2D262 /* Build configuration list for PBXNativeTarget "DotMatrixTests" */;
+			buildPhases = (
+				DB33BE8317510F9900B2D262 /* Sources */,
+				DB33BE8417510F9900B2D262 /* Frameworks */,
+				DB33BE8517510F9900B2D262 /* Resources */,
+				DB33BE8617510F9900B2D262 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB33BE8E17510F9900B2D262 /* PBXTargetDependency */,
+			);
+			name = DotMatrixTests;
+			productName = DotMatrixTests;
+			productReference = DB33BE8817510F9900B2D262 /* DotMatrixTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB33BE5717510F9900B2D262 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Michael Donahue";
+			};
+			buildConfigurationList = DB33BE5A17510F9900B2D262 /* Build configuration list for PBXProject "DotMatrix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB33BE5617510F9900B2D262;
+			productRefGroup = DB33BE6017510F9900B2D262 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB33BE5E17510F9900B2D262 /* DotMatrix */,
+				DB33BE8717510F9900B2D262 /* DotMatrixTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB33BE5D17510F9900B2D262 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB33BE6D17510F9900B2D262 /* InfoPlist.strings in Resources */,
+				DB33BE7517510F9900B2D262 /* Default.png in Resources */,
+				DB33BE7717510F9900B2D262 /* Default@2x.png in Resources */,
+				DB33BE7917510F9900B2D262 /* Default-568h@2x.png in Resources */,
+				DB33BE7C17510F9900B2D262 /* MainStoryboard_iPhone.storyboard in Resources */,
+				DB33BE7F17510F9900B2D262 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB33BE8517510F9900B2D262 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB33BE9417510F9900B2D262 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB33BE8617510F9900B2D262 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB33BE5B17510F9900B2D262 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB33BE6F17510F9900B2D262 /* main.m in Sources */,
+				DB33BE7317510F9900B2D262 /* AppDelegate.m in Sources */,
+				DB33BE8217510F9900B2D262 /* ViewController.m in Sources */,
+				DB33BEAC175111DE00B2D262 /* Cell.m in Sources */,
+				DB58B1951757086000C3B589 /* GtarDotMatrix.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB33BE8317510F9900B2D262 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB33BE9717510F9900B2D262 /* DotMatrixTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB33BE8E17510F9900B2D262 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB33BE5E17510F9900B2D262 /* DotMatrix */;
+			targetProxy = DB33BE8D17510F9900B2D262 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB33BE6B17510F9900B2D262 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB33BE6C17510F9900B2D262 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB33BE7A17510F9900B2D262 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB33BE7B17510F9900B2D262 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DB33BE7D17510F9900B2D262 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB33BE7E17510F9900B2D262 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		DB33BE9217510F9900B2D262 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB33BE9317510F9900B2D262 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB33BE9817510F9900B2D262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB33BE9917510F9900B2D262 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB33BE9B17510F9900B2D262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DotMatrix/DotMatrix-Prefix.pch";
+				INFOPLIST_FILE = "DotMatrix/DotMatrix-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/GtarController\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DB33BE9C17510F9900B2D262 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DotMatrix/DotMatrix-Prefix.pch";
+				INFOPLIST_FILE = "DotMatrix/DotMatrix-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/GtarController\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DB33BE9E17510F9900B2D262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DotMatrix.app/DotMatrix";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DotMatrix/DotMatrix-Prefix.pch";
+				INFOPLIST_FILE = "DotMatrixTests/DotMatrixTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DB33BE9F17510F9900B2D262 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DotMatrix.app/DotMatrix";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DotMatrix/DotMatrix-Prefix.pch";
+				INFOPLIST_FILE = "DotMatrixTests/DotMatrixTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB33BE5A17510F9900B2D262 /* Build configuration list for PBXProject "DotMatrix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB33BE9817510F9900B2D262 /* Debug */,
+				DB33BE9917510F9900B2D262 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB33BE9A17510F9900B2D262 /* Build configuration list for PBXNativeTarget "DotMatrix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB33BE9B17510F9900B2D262 /* Debug */,
+				DB33BE9C17510F9900B2D262 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB33BE9D17510F9900B2D262 /* Build configuration list for PBXNativeTarget "DotMatrixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB33BE9E17510F9900B2D262 /* Debug */,
+				DB33BE9F17510F9900B2D262 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB33BE5717510F9900B2D262 /* Project object */;
+}
