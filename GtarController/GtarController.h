@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "/Users/madworks/Development/gTar Tester/gTar Tester/GtarController/Gtar.h"
+#import "gTar.h"
 
 /*!
  @abstract The result status code used by the GtarController.

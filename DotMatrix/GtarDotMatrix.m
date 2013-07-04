@@ -7,7 +7,7 @@
 //
  
 #import "GtarDotMatrix.h"
-#import "Gtar.h"
+#import "GtarController.h"
 
 @interface GtarDotMatrix ()
 
@@ -15,20 +15,27 @@
 
 @implementation GtarDotMatrix
 
-- (void) drawRow:(int)currentRow
+GtarController *m_pGtarController;
+
+// This draws a row on the currentFret.  This is where we light up the LEDs
+- (void) drawRow:(int)currentFret
 {
-    for (int x = 0; x < GtarStringCount; x++) {
-        if (currentRow & (1 << x))
+    for (int currentString = 0; currentString < GtarStringCount; currentString++) {
+        if (currentFret & (1 << currentString))
         {
-            _feedSet[x] = _onColor;
+            _feedSet[currentString] = _onColor;
+            [m_pGtarController turnOnLedAtPosition:GtarPositionMake(currentFret, currentString) withColor:GtarLedColorMake(GtarMaxLedIntensity, GtarMaxLedIntensity, GtarMaxLedIntensity)];
+
         }
         else
         {
-            _feedSet[x] = _offColor;
+            _feedSet[currentString] = _offColor;
+            [m_pGtarController turnOnLedAtPosition:GtarPositionMake(currentFret, currentString) withColor:GtarLedColorMake(0,0,0)];
         }
     }
 }
 
+// Used to add a word from whatever app
 - (void) addWord: (NSString *) myWord
 {
     
@@ -52,6 +59,7 @@
     }
 }
 
+// This controles the speed or the scroll by controlling how ofter we write a fret out 
 - (void) heartbeat:(NSTimer *)theTimer
 {
     [self willChangeValueForKey:@"feedSet"];
@@ -61,17 +69,51 @@
     if (_linesFed < _dataSet.count)
     {
         NSValue * currentRow = _dataSet[_linesFed];
-        int currentSet;
-        [currentRow getValue:&currentSet];
-        [self drawRow:currentSet];
+        int currentFret;
+        [currentRow getValue:&currentFret];
+        [self drawRow:currentFret];
         _linesFed ++;
     }
     [self didChangeValueForKey:@"feedSet"];
 }
 
+- (void)gtarFretDown:(GtarPosition)position
+{
+    // Triggers when a user pushes down a given fret
+}
+
+- (void)gtarFretUp:(GtarPosition)position
+{
+    // Triggers when a given fret has been released
+}
+
+- (void)gtarNoteOn:(GtarPluck)pluck
+{
+    // Triggered when a user plays a given note
+}
+
+- (void)gtarNoteOff:(GtarPosition)position
+{
+    // Triggered when a given note is killed
+}
+
+- (void)gtarConnected
+{
+    // Triggered when a gTar connection is detected
+}
+
+- (void)gtarDisconnected
+{
+    // Triggered when an active gTar connection is terminated
+}
+
 
 - (void) loadLexicon
 {
+    m_pGtarController = [[GtarController alloc] init];
+    [m_pGtarController debugSpoofConnected];
+    [m_pGtarController turnOffAllLeds];
+    
     _onColor = [UIColor whiteColor];
     _offColor = [UIColor blackColor];
     _feedSet = [[NSMutableArray alloc]init];
