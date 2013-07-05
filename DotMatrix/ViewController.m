@@ -29,7 +29,7 @@
     [super viewDidLoad];
     _controller = [[GtarDotMatrix alloc] init];
     [_controller loadLexicon];
-    [_controller addWord:@"Hello World"];
+    [_controller addWord:@"Hello Incident"];
     [_controller addObserver:self
                       forKeyPath:@"feedSet"
                          options:NSKeyValueObservingOptionNew
