@@ -71,11 +71,11 @@ GtarController *m_pGtarController;
             
             if (_feedSet[x] == _offColor)
             {
-                [m_pGtarController turnOnLedAtPosition:GtarPositionMake(fretLocation, stringLocation) withColor:_offLEDColor];
+                [m_pGtarController turnOffLedAtPosition:GtarPositionMake(fretLocation, stringLocation)];
             }
             else
             {
-                [m_pGtarController turnOffLedAtPosition:GtarPositionMake(fretLocation, stringLocation)];
+                [m_pGtarController turnOnLedAtPosition:GtarPositionMake(fretLocation, stringLocation) withColor:_onLEDColor];
             }
         }
     }
@@ -126,7 +126,9 @@ GtarController *m_pGtarController;
 - (void) loadLexicon
 {
     m_pGtarController = [[GtarController alloc] init];
+#if TARGET_IPHONE_SIMULATOR
     [m_pGtarController debugSpoofConnected];
+#endif
     [m_pGtarController turnOffAllLeds];
     [m_pGtarController setLogLevel:GtarControllerLogLevelAll];
     
