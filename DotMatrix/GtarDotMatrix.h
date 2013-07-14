@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Gtar.h"
+#import "GtarController.h"
 
 @protocol GtarDotMatrix <NSObject>
 
@@ -22,9 +24,13 @@
 @property (nonatomic, strong) NSDictionary * lexicon;
 @property (nonatomic, strong) UIColor * onColor;
 @property (nonatomic, strong) UIColor * offColor;
+@property (nonatomic, assign) GtarLedColor onLEDColor;
+@property (nonatomic, assign) GtarLedColor offLEDColor;
 
 - (void) drawRow:(int)currentRow;
 - (void) loadLexicon;
 - (void) addWord: (NSString *) myWord;
+- (void)gtarConnected;
+
 
 @end

@@ -17,20 +17,18 @@
 
 GtarController *m_pGtarController;
 
-// This draws a row on the currentFret.  This is where we light up the LEDs
+// This draws a row on the currentFret.  
 - (void) drawRow:(int)currentFret
 {
     for (int currentString = 0; currentString < GtarStringCount; currentString++) {
         if (currentFret & (1 << currentString))
         {
             _feedSet[currentString] = _onColor;
-            [m_pGtarController turnOnLedAtPosition:GtarPositionMake(currentFret, currentString) withColor:GtarLedColorMake(GtarMaxLedIntensity, GtarMaxLedIntensity, GtarMaxLedIntensity)];
 
         }
         else
         {
             _feedSet[currentString] = _offColor;
-            [m_pGtarController turnOnLedAtPosition:GtarPositionMake(currentFret, currentString) withColor:GtarLedColorMake(0,0,0)];
         }
     }
 }
@@ -65,7 +63,23 @@ GtarController *m_pGtarController;
     [self willChangeValueForKey:@"feedSet"];
     for (int x = GtarLedCount; x >= 0 ; x--) {
         if (x < GtarStringCount) { _feedSet[x] = _offColor; } else { _feedSet[x] = _feedSet[x - GtarStringCount]; }
+        // Turn on the LEDs on a real gTar here..
+        if (m_pGtarController.connected)
+        {
+            int fretLocation = (x == 0) ?  1 : (x / GtarStringCount) + 1; // 0 - 15, + 1 to avoid the 'open' fret notation
+            int stringLocation = (x == 0) ?  1 : (x % GtarStringCount) + 1;  // 0 - 5 + 1 to avoid the open string notation
+            
+            if (_feedSet[x] == _offColor)
+            {
+                [m_pGtarController turnOffLedAtPosition:GtarPositionMake(fretLocation, stringLocation)];
+            }
+            else
+            {
+                [m_pGtarController turnOnLedAtPosition:GtarPositionMake(fretLocation, stringLocation) withColor:_onLEDColor];
+            }
+        }
     }
+    
     if (_linesFed < _dataSet.count)
     {
         NSValue * currentRow = _dataSet[_linesFed];
@@ -74,6 +88,7 @@ GtarController *m_pGtarController;
         [self drawRow:currentFret];
         _linesFed ++;
     }
+    
     [self didChangeValueForKey:@"feedSet"];
 }
 
@@ -111,11 +126,18 @@ GtarController *m_pGtarController;
 - (void) loadLexicon
 {
     m_pGtarController = [[GtarController alloc] init];
+#if TARGET_IPHONE_SIMULATOR
     [m_pGtarController debugSpoofConnected];
+#endif
     [m_pGtarController turnOffAllLeds];
+    [m_pGtarController setLogLevel:GtarControllerLogLevelAll];
     
     _onColor = [UIColor whiteColor];
     _offColor = [UIColor blackColor];
+    
+    _onLEDColor = GtarLedColorMake(GtarMaxLedIntensity, GtarMaxLedIntensity,GtarMaxLedIntensity);
+    _offLEDColor = GtarLedColorMake(0, 0, 0);
+    
     _feedSet = [[NSMutableArray alloc]init];
     for (int x = 0; x < GtarLedCount; x++) {
         [_feedSet addObject:_offColor];
